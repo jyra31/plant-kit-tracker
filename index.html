@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Kit & Water Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Plant Kit & Water Tracker</h1>
+
+        <!-- Plant Guide Section -->
+        <div class="section">
+            <h2>📦 How to Use Your Plant Kit</h2>
+            <ol>
+                <li>Unbox your plant kit.</li>
+                <li>Fill the pot with soil.</li>
+                <li>Plant seeds evenly.</li>
+                <li>Water gently and place in sunlight.</li>
+                <li>Use the tracker below to log watering.</li>
+            </ol>
+        </div>
+
+        <!-- Watering Tracker Section -->
+        <div class="section">
+            <h2>💦 Watering Tracker</h2>
+            <input type="text" id="noteInput" placeholder="Add a note (e.g., 'Watered at 9 AM')">
+            <button onclick="logWatering()">Log Watering</button>
+            <h3>📜 Watering History</h3>
+            <ul id="waterLog"></ul>
+        </div>
+
+        <!-- Watering Reminder Section -->
+        <div class="section">
+            <h2>⏰ Set Watering Reminder</h2>
+            <input type="datetime-local" id="reminderTime">
+            <button onclick="setReminder()">Set Reminder</button>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="section">
+            <h2>📷 QR Code for Tracking</h2>
+            <input type="text" id="qrUrl" placeholder="Enter URL (e.g., tracking page)">
+            <button onclick="generateQRCode()">Generate QR Code</button>
+            <div id="qrCode"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
